@@ -1,9 +1,9 @@
 # SGX Report breakdown
 
-SGX report is used to verify hat the signing authority is rooted to a trusted authority such as the enclave platform manufacturer. Practically, it means that you can verify that the code is running in a Trusted Execution Environment. It also includes a number of attributes you, as a consumer of the report, need to verify yourself.
+SGX report is used to verify that the signing authority is rooted to a trusted authority such as the enclave platform manufacturer. Practically, it means that you can verify that the code is running in a Trusted Execution Environment. It also includes a number of attributes you, as a consumer of the report, need to verify yourself.
 
 ## `Data`
-The report data that has been included in the report. This can any data up to 64 bytes that the enclave signs and attests to.
+The report data that has been included in the report. This can be any data up to 64 bytes that the enclave signs and attests to.
 
 ### How do I verify it?
 
@@ -42,7 +42,7 @@ SignerID uniquely identifies enclave's signer. A developer generates a pair of R
 Check the developer's documentation to find the signer ID for the software they're running.
 
 ## `ProductID`
-ProductID uniquely identifies a Product - changed by the developer to indicate different software modules, which are a part of the same enclave. All the enclaves whose signatures have the same ProductID and are issued by the same RSA key (and therefore have the same MRENCLAVE) are assumed to represent different versions of the same software module.
+ProductID uniquely identifies a Product - changed by the developer to indicate different software modules, which are a part of the same enclave. All the enclaves whose signatures have the same `ProductID` and are issued by the same RSA key (and therefore have the same `UniqueID`) are assumed to represent different versions of the same software module.
 
 ### How do I verify it?
 
