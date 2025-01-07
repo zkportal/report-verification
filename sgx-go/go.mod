@@ -1,10 +1,12 @@
 module github.com/zkportal/report-verification/sgx-go
 
-go 1.18
+go 1.21
 
-require github.com/edgelesssys/ego v1.5.2
+toolchain go1.21.12
+
+require github.com/edgelesssys/ego v1.6.1
 
 require (
-	golang.org/x/crypto v0.23.0 // indirect
-	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
+	github.com/go-jose/go-jose/v4 v4.0.4 // indirect
+	golang.org/x/crypto v0.32.0 // indirect
 )
