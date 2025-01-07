@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"crypto/sha256"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 
@@ -17,7 +17,7 @@ func main() {
 	}
 	defer file.Close()
 
-	reportBytes, err := ioutil.ReadAll(file)
+	reportBytes, err := io.ReadAll(file)
 	if err != nil {
 		log.Fatalln(err)
 	}
